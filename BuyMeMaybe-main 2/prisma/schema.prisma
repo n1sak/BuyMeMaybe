@@ -1,0 +1,50 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// Ephemeral pipeline state between /api/analyze and /api/generate (required on serverless).
+model GenerationJob {
+  id        String    @id
+  status    String
+  payload   Json
+  itemId    String?
+  errorMsg  String?
+  startedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([createdAt])
+}
+
+model Item {
+  id             String   @id @default(cuid())
+  itemName       String
+  category       String
+  script         String
+  videoUrl       String
+  imageUrl       String
+  askingPrice    Int
+  originalPrice  Int?
+  urgencyDays    Int
+  sellerName     String
+  sellerLocation String
+  /// Create form: brand · category (optional)
+  listingLine1   String?
+  /// Create form: size · condition (optional)
+  listingLine2   String?
+  /// Create form: extra notes (optional)
+  listingExtra   String?
+  /// Create form: clothing | kitchen | electronics | decor | books | random
+  sellerCategoryKey String?
+  likes          Int      @default(0)
+  captions       String
+  createdAt      DateTime @default(now())
+
+  @@index([createdAt])
+  @@index([category])
+}
