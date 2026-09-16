@@ -3,8 +3,8 @@
 
 A secondhand marketplace where your old items do the talking and sell themselves!
 
-<img width="429" height="852" alt="Screenshot 2026-09-15 at 8 11 48 PM" src="https://github.com/user-attachments/assets/27f5fcbf-0bc4-4aee-bef7-179226834f27" />
-<img width="435" height="855" alt="Screenshot 2026-09-15 at 8 12 13 PM" src="https://github.com/user-attachments/assets/742cafd9-8f0e-4a78-b065-41b7a522187a" />
+<img width="300" alt="Screenshot 2026-09-15 at 8 11 48 PM" src="https://github.com/user-attachments/assets/27f5fcbf-0bc4-4aee-bef7-179226834f27" />
+<img width="300" alt="Screenshot 2026-09-15 at 8 12 13 PM" src="https://github.com/user-attachments/assets/742cafd9-8f0e-4a78-b065-41b7a522187a" />
 
 
 Check-out Our Demo Video Here:
